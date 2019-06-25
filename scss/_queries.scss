@@ -1,4 +1,8 @@
 @media screen and (max-height: 830px) and (max-width: 414px) {
+  html {
+    font-size: 15px;
+  }
+
   .container .calculator {
     width: 90%;
     height: 90%;
@@ -29,11 +33,5 @@
   .btnx2 {
     height: 2.5rem;
     width: 6.2rem;
-  }
-}
-
-@media screen and (max-height: 1024px) and (max-width: 768px) {
-  html {
-    font-size: 15px;
   }
 }
