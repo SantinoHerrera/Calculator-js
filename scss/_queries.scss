@@ -31,3 +31,9 @@
     width: 6.2rem;
   }
 }
+
+@media screen and (max-height: 1024px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
