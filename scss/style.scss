@@ -1,0 +1,107 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1rem;
+  height: 100%;
+
+  .blur-overlay {
+    height: 100%;
+    background: url('../img/desktop.jpg') no-repeat center center/cover;
+    filter: sepia(100%) blur(1px) invert(70%);
+    .dark-overlay {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .calculator {
+    background: url('../img/iphone.png') no-repeat center center/cover;
+    position: absolute;
+    height: 780px;
+    width: 394px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .buttons {
+      display: inherit;
+      flex-direction: inherit;
+      height: 90%;
+      width: 90%;
+
+      .result {
+        flex: 4;
+        background: rgba($color: white, $alpha: 0);
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .result-text {
+          overflow: hidden;
+          width: 80%;
+        }
+      }
+
+      .calculator-rows {
+        flex: 6;
+        display: inherit;
+        flex-direction: inherit;
+        justify-content: space-evenly;
+        .calculator-row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.btn-dark-gray {
+    @include set-background($dark-gray-color);
+  }
+  &.btn-light-gray {
+    @include set-background($light-gray-color);
+  }
+  &.btn-orange {
+    @include set-background($orange-color);
+  }
+}
+
+.btnx2 {
+  width: 9rem;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+@import 'queries';

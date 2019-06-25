@@ -1,0 +1,19 @@
+$dark-gray-color: #474342;
+$light-gray-color: #b5b2b1;
+$orange-color: #fea803;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+  &:hover {
+    background: lighten($color, 5%);
+  }
+}

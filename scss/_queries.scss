@@ -1,0 +1,33 @@
+@media screen and (max-height: 830px) and (max-width: 414px) {
+  .container .calculator {
+    width: 90%;
+    height: 90%;
+    background-size: contain;
+  }
+
+  .btn {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .btnx2 {
+    height: 3rem;
+    width: 7rem;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+  }
+}
+
+@media screen and (max-height: 568px) and (max-width: 320px) {
+  .btn {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .btnx2 {
+    height: 2.5rem;
+    width: 6.2rem;
+  }
+}
