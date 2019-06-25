@@ -48,14 +48,31 @@ body {
       .result {
         flex: 4;
         background: rgba($color: white, $alpha: 0);
-        font-size: 2rem;
+        font-size: 1.8rem;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: flex-end;
 
         .result-text {
           overflow: hidden;
           width: 80%;
+          text-align: right;
+          padding: 0rem 0.5rem;
+        }
+
+        .help-text {
+          overflow: hidden;
+          width: 80%;
+          text-align: right;
+          padding: 0rem 0.5rem;
+        }
+
+        .operation-text {
+          overflow: hidden;
+          width: 80%;
+          text-align: right;
+          padding: 0rem 0.5rem;
         }
       }
 
@@ -102,6 +119,10 @@ body {
   border-bottom-right-radius: 50% 100%;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
+}
+
+.mr-1 {
+  margin-right: 2rem;
 }
 
 @import 'queries';
